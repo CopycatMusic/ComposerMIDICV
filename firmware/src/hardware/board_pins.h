@@ -1,0 +1,19 @@
+#ifndef COMPOSER_MIDICV_HARDWARE_BOARD_PINS_H_
+#define COMPOSER_MIDICV_HARDWARE_BOARD_PINS_H_
+
+#define PIN_LED_R 0
+#define PIN_LED_G 1
+#define PIN_LED_B 2
+#define LED_ACTIVE_LOW 1
+
+#define PIN_DAC_SCK 26
+#define PIN_DAC_MOSI 19
+#define PIN_DAC_CS_U5 20
+#define PIN_DAC_CS_U6 21
+
+#define PIN_GATE_1 22
+#define PIN_GATE_2 23
+#define PIN_GATE_3 24
+#define PIN_GATE_4 25
+
+#endif  // COMPOSER_MIDICV_HARDWARE_BOARD_PINS_H_
