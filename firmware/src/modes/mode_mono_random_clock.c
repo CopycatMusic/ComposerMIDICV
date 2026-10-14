@@ -9,7 +9,8 @@ static uint16_t random_cv(ModeMonoRandomClockState* state) {
     x ^= x >> 17;
     x ^= x << 5;
     state->random_state = x == 0 ? 0x1f123bb5u : x;
-    return (uint16_t)(state->random_state & COMPOSER_MIDICV_DAC_MAX_CODE);
+    return (uint16_t)(state->random_state %
+                      (COMPOSER_MIDICV_CV_MAX_MV + 1u));
 }
 
 static void apply_active_note(ModeMonoRandomClockState* state,

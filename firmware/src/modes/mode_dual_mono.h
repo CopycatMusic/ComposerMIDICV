@@ -9,8 +9,8 @@
 typedef struct {
     bool active[2];
     uint8_t note[2];
-    uint8_t cc1;
-    int16_t pitch_bend;
+    uint8_t velocity[2];
+    int16_t pitch_bend[2];
     uint8_t trigger_ms[2];
 } ModeDualMonoState;
 

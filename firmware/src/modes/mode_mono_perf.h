@@ -7,7 +7,7 @@
 typedef struct {
     NoteStack notes;
     uint8_t cc1;
-    uint8_t cc11;
+    uint32_t random_state;
     int16_t pitch_bend;
     uint8_t trigger_ms[4];
 } ModeMonoPerfState;

@@ -1,0 +1,251 @@
+(footprint "SW-SMD_L3.9-W3.0-P4.45"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(locked yes)
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 4.975 -0.05 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d2954d8a-3d37-47c3-862f-91808a1b9f03")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW-SMD_L3.9-W3.0-P4.45"
+		(at 0 4 180)
+		(layer "F.Fab")
+		(uuid "5f356097-6dc1-462d-a9bd-d4972bfe6fa9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://lcsc.com/product-detail/Tactile-Switches_XUNPU-TS-1088-AR02016_C720477.html"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "66d19805-7c3d-499a-920f-5fe4e0c69203")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6a19d61f-cb65-4b0a-a06b-2e39f080b7b8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C720477"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0307b9f3-c9b1-47c7-a11f-7d8e6c2b020b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "XUNPU(讯普)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a2c166e-5d64-4c37-97ee-e180a05f613f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "TS-1088-AR02016"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c93a3bb2-87ec-4715-81f3-8d8ba57eb844")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "ComposerMIDICV.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.03 -1.54)
+		(end -2.03 -1.11)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "884568c1-f56e-4d8a-85c1-8c10e72866a7")
+	)
+	(fp_line
+		(start -2.03 1.54)
+		(end -2.03 1.11)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a28b7e47-353d-4848-92a1-532a04405609")
+	)
+	(fp_line
+		(start 2.03 -1.54)
+		(end -2.03 -1.54)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "051e14e7-e10b-447a-9302-ea7a8387f51d")
+	)
+	(fp_line
+		(start 2.03 -1.54)
+		(end 2.03 -1.11)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5006f904-c3e9-4ef4-ab91-9bf1bc3fa78c")
+	)
+	(fp_line
+		(start 2.03 1.11)
+		(end 2.03 1.54)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29d1c407-ebd2-4313-85bf-4fd3571fad0c")
+	)
+	(fp_line
+		(start 2.03 1.54)
+		(end -2.03 1.54)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ac98e78e-644c-40fc-a1d1-bf53a3f4cec9")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.9 0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "c340738d-3136-4fb6-a6b3-f93855c1467d")
+	)
+	(fp_circle
+		(center 2.5 -1.47)
+		(end 2.53 -1.47)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "6491d8af-387b-49c9-b0f2-c6b8a8c0c80b")
+	)
+	(fp_line
+		(start -1.95 -1.46)
+		(end 1.95 -1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8db7ba51-5bce-4e90-9bd1-edaf39cbed7a")
+	)
+	(fp_line
+		(start -1.95 1.46)
+		(end -1.95 -1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "34d66883-5c83-45b1-93b8-c86814a1b189")
+	)
+	(fp_line
+		(start 1.95 -1.46)
+		(end 1.95 1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6cfef4e1-bf35-4ab6-905a-40f9240caed9")
+	)
+	(fp_line
+		(start 1.95 1.46)
+		(end -1.95 1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0f8c3b11-475f-482d-b00b-33af9995c65b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "823be1fd-2b79-4086-ae5e-11b1efdb9389")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.18 0)
+		(size 1.23 1.86)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bd196373-8039-48aa-bd73-4e0489283879")
+	)
+	(pad "2" smd rect
+		(at 2.18 0)
+		(size 1.23 1.86)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1f07bce9-9fb4-4307-a754-17bfc47b9df5")
+	)
+	(embedded_fonts no)
+	(model "${KICAD_3RD_PARTY}/EasyEDA.3dshapes/SW-SMD_L3.9-W2.9-H2.0-LS4.8.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

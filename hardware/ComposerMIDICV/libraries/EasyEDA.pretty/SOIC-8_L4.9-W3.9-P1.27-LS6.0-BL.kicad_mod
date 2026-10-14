@@ -1,0 +1,288 @@
+(footprint "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -6.57 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f6a34e72-040c-44d4-a49d-c1d8ffd72e78")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+		(at 0 6.57 180)
+		(layer "F.Fab")
+		(uuid "08e4fc71-ff1d-4ce3-a5e8-4413506108f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://lcsc.com/product-detail/Digital-To-Analog-Converters-DACs_MICROCHIP_MCP4822-E-SN_MCP4822-E-SN_C16040.html"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "afb7b693-b9f1-4770-b2e1-6b50bee7edc3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0b3fadca-64a8-4efe-8bf0-d3a001af2fe8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C16040"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eea82a15-b470-4a4c-bed4-4dc584e61857")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "MICROCHIP(美国微芯)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4811d51c-c1a7-4cf8-b622-3249fe9260a2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "MCP4822-E/SN"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f1831aaa-b95a-4d13-aa70-9cf481008c08")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "ComposerMIDICV.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.53 -1.52)
+		(end 2.53 -1.52)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c7f8e123-b730-4ce8-ad13-fa7ca98204f5")
+	)
+	(fp_line
+		(start -2.53 1.52)
+		(end -2.53 -1.52)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d400f1a3-7271-423b-b14a-bf166f20309a")
+	)
+	(fp_line
+		(start 2.53 -1.52)
+		(end 2.53 1.52)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "df5b1276-3f67-40aa-994d-82b71d6cca39")
+	)
+	(fp_line
+		(start 2.53 1.52)
+		(end -2.53 1.52)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a529b02-6c05-4ca6-9af2-563d862e7a46")
+	)
+	(fp_circle
+		(center -2.65 2.77)
+		(end -2.5 2.77)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "1629a6e8-2be1-4064-8f94-5ea77cc7e1a7")
+	)
+	(fp_circle
+		(center -2.45 3)
+		(end -2.42 3)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b5de8121-7a87-4bde-b0a1-1c506fa221ea")
+	)
+	(fp_circle
+		(center -1.9 0.77)
+		(end -1.75 0.77)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "9b50a119-0caf-42d6-9d95-68b1631a7a29")
+	)
+	(fp_circle
+		(center -1.9 3.4)
+		(end -1.75 3.4)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "76c6d8ea-4a00-498c-8d13-43d9d2865fb3")
+	)
+	(fp_line
+		(start -2.45 -1.95)
+		(end 2.45 -1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ebdabd61-aaa4-4a75-bb3b-a14dd5d095e4")
+	)
+	(fp_line
+		(start -2.45 1.95)
+		(end -2.45 -1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e72da286-2ba0-4369-a677-9e3c728b7115")
+	)
+	(fp_line
+		(start 2.45 -1.95)
+		(end 2.45 1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "24e843df-e6b9-4e20-9595-44f23b4eee87")
+	)
+	(fp_line
+		(start 2.45 1.95)
+		(end -2.45 1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f1e49f2d-fc0e-4287-9188-9a10c0f48d7e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "8215667a-f12e-483a-9230-dc23c9e7972b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd oval
+		(at -1.9 2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4ba26efc-fb65-4845-8571-2cf7e6dfebc9")
+	)
+	(pad "2" smd oval
+		(at -0.63 2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9555c75a-fb51-452b-bb7a-01ba5f19f60b")
+	)
+	(pad "3" smd oval
+		(at 0.63 2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2c5c2462-7019-4dc5-a66d-c4a8de425d4c")
+	)
+	(pad "4" smd oval
+		(at 1.9 2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "03f50f6d-5696-4f73-ae3c-cb699232c6e6")
+	)
+	(pad "5" smd oval
+		(at 1.9 -2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b84db96e-2921-4579-8597-c2c96fc958f3")
+	)
+	(pad "6" smd oval
+		(at 0.63 -2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fe9c0bae-cb11-4d93-8bd1-16c309804a78")
+	)
+	(pad "7" smd oval
+		(at -0.63 -2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "548100c6-ff60-4289-bc8f-b5ff9a9bb9fa")
+	)
+	(pad "8" smd oval
+		(at -1.9 -2.57)
+		(size 0.588 2.045)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f5eb5499-12a8-4a0d-94e7-cd51e8d466eb")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3RD_PARTY}/3dmodels/com_github_CDFER_JLCPCB-Kicad-Library/JLCPCB.3dshapes/SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

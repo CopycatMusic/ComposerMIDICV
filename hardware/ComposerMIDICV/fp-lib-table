@@ -1,0 +1,9 @@
+(fp_lib_table
+  (lib (name "ComposerMIDICV")(type "KiCad")(uri "${KIPRJMOD}/ComposerMIDICV.pretty")(options "")(descr "Project footprint dependency"))
+  (lib (name "AudioJacks")(type "KiCad")(uri "${KIPRJMOD}/libraries/AudioJacks.pretty")(options "")(descr "Project footprint dependency"))
+  (lib (name "COPYCAT logo")(type "KiCad")(uri "${KIPRJMOD}/libraries/COPYCAT_logo.pretty")(options "")(descr "Project footprint dependency"))
+  (lib (name "EasyEDA")(type "KiCad")(uri "${KIPRJMOD}/libraries/EasyEDA.pretty")(options "")(descr "Project footprint dependency"))
+  (lib (name "PCM_JLCPCB")(type "KiCad")(uri "${KIPRJMOD}/libraries/PCM_JLCPCB.pretty")(options "")(descr "Project footprint dependency"))
+  (lib (name "Resistor_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Resistor_SMD.pretty")(options "")(descr "Project footprint dependency"))
+  (lib (name "Package_DFN_QFN")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Package_DFN_QFN.pretty")(options "")(descr "Project footprint dependency"))
+)

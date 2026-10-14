@@ -3,6 +3,16 @@
 #include "board_config.h"
 #include "music/pitch_cv.h"
 
+static uint16_t random_cv(ModeMonoPerfState* state) {
+    uint32_t x = state->random_state;
+    x ^= x << 13;
+    x ^= x >> 17;
+    x ^= x << 5;
+    state->random_state = x == 0 ? 0x1f123bb5u : x;
+    return (uint16_t)(state->random_state %
+                      (COMPOSER_MIDICV_CV_MAX_MV + 1u));
+}
+
 static void apply_active_note(ModeMonoPerfState* state, OutputState* output) {
     uint8_t note = 0;
     uint8_t velocity = 0;
@@ -16,14 +26,13 @@ static void apply_active_note(ModeMonoPerfState* state, OutputState* output) {
         output->gate[1] = false;
     }
     output->cv_mv[2] = pitch_cv_7bit_to_mv(state->cc1);
-    output->cv_mv[3] = pitch_cv_7bit_to_mv(state->cc11);
 }
 
 static void reset(void* mode_state, OutputState* output) {
     ModeMonoPerfState* state = (ModeMonoPerfState*)mode_state;
     note_stack_init(&state->notes);
     state->cc1 = 0;
-    state->cc11 = 0;
+    state->random_state = 0x31415927u;
     state->pitch_bend = 0;
     for (uint8_t i = 0; i < 4; ++i) {
         state->trigger_ms[i] = 0;
@@ -39,6 +48,7 @@ static void handle_midi(void* mode_state,
     switch (event->type) {
         case MIDI_EVENT_NOTE_ON:
             note_stack_note_on(&state->notes, event->data1, event->data2);
+            output->cv_mv[3] = random_cv(state);
             state->trigger_ms[2] = COMPOSER_MIDICV_TRIGGER_MS;
             state->trigger_ms[3] = COMPOSER_MIDICV_TRIGGER_MS;
             output->gate[2] = true;
@@ -54,8 +64,6 @@ static void handle_midi(void* mode_state,
         case MIDI_EVENT_CONTROL_CHANGE:
             if (event->data1 == 1) {
                 state->cc1 = event->data2;
-            } else if (event->data1 == 11) {
-                state->cc11 = event->data2;
             }
             apply_active_note(state, output);
             break;
@@ -85,7 +93,7 @@ static void tick_1ms(void* mode_state, OutputState* output) {
 
 Mode mode_mono_perf_create(ModeMonoPerfState* state) {
     Mode mode = {
-        .name = "mono_perf",
+        .name = "midi1",
         .state = state,
         .implemented = true,
         .reset = reset,

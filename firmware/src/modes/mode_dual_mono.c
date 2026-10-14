@@ -9,37 +9,22 @@ static void apply_voice(ModeDualMonoState* state,
     if (voice == 0) {
         output->cv_mv[0] = state->active[0]
                                ? pitch_cv_note_to_mv_bend(state->note[0],
-                                                          state->pitch_bend)
+                                                          state->pitch_bend[0])
                                : output->cv_mv[0];
-        output->cv_mv[1] = pitch_cv_7bit_to_mv(state->cc1);
+        output->cv_mv[1] = pitch_cv_7bit_to_mv(state->velocity[0]);
         output->gate[0] = state->active[0];
     } else {
         output->cv_mv[2] = state->active[1]
                                ? pitch_cv_note_to_mv_bend(state->note[1],
-                                                          state->pitch_bend)
+                                                          state->pitch_bend[1])
                                : output->cv_mv[2];
-        output->cv_mv[3] = pitch_cv_7bit_to_mv(state->cc1);
+        output->cv_mv[3] = pitch_cv_7bit_to_mv(state->velocity[1]);
         output->gate[2] = state->active[1];
     }
 }
 
-static void apply_all_voices(ModeDualMonoState* state, OutputState* output) {
-    apply_voice(state, output, 0);
-    apply_voice(state, output, 1);
-}
-
-static uint8_t allocate_voice(ModeDualMonoState* state, uint8_t note) {
-    for (uint8_t i = 0; i < 2; ++i) {
-        if (state->active[i] && state->note[i] == note) {
-            return i;
-        }
-    }
-    for (uint8_t i = 0; i < 2; ++i) {
-        if (!state->active[i]) {
-            return i;
-        }
-    }
-    return 0;
+static uint8_t voice_for_channel(uint8_t channel) {
+    return channel < 8u ? 0u : 1u;
 }
 
 static void reset(void* mode_state, OutputState* output) {
@@ -47,10 +32,10 @@ static void reset(void* mode_state, OutputState* output) {
     for (uint8_t i = 0; i < 2; ++i) {
         state->active[i] = false;
         state->note[i] = 0xff;
+        state->velocity[i] = 0;
+        state->pitch_bend[i] = 0;
         state->trigger_ms[i] = 0;
     }
-    state->cc1 = 0;
-    state->pitch_bend = 0;
     output_state_clear(output);
 }
 
@@ -61,9 +46,10 @@ static void handle_midi(void* mode_state,
 
     switch (event->type) {
         case MIDI_EVENT_NOTE_ON: {
-            const uint8_t voice = allocate_voice(state, event->data1);
+            const uint8_t voice = voice_for_channel(event->channel);
             state->active[voice] = true;
             state->note[voice] = event->data1;
+            state->velocity[voice] = event->data2;
             state->trigger_ms[voice] = COMPOSER_MIDICV_TRIGGER_MS;
             output->gate[voice == 0 ? 1 : 3] = true;
             apply_voice(state, output, voice);
@@ -71,26 +57,24 @@ static void handle_midi(void* mode_state,
         }
 
         case MIDI_EVENT_NOTE_OFF:
-            for (uint8_t i = 0; i < 2; ++i) {
-                if (state->active[i] && state->note[i] == event->data1) {
-                    state->active[i] = false;
-                    state->note[i] = 0xff;
-                    apply_voice(state, output, i);
+            {
+                const uint8_t voice = voice_for_channel(event->channel);
+                if (state->active[voice] &&
+                    state->note[voice] == event->data1) {
+                    state->active[voice] = false;
+                    state->note[voice] = 0xff;
+                    state->velocity[voice] = 0;
+                    apply_voice(state, output, voice);
                 }
             }
             break;
 
-        case MIDI_EVENT_CONTROL_CHANGE:
-            if (event->data1 == 1) {
-                state->cc1 = event->data2;
-                output->cv_mv[1] = pitch_cv_7bit_to_mv(state->cc1);
-                output->cv_mv[3] = pitch_cv_7bit_to_mv(state->cc1);
-            }
-            break;
-
         case MIDI_EVENT_PITCH_BEND:
-            state->pitch_bend = event->pitch_bend;
-            apply_all_voices(state, output);
+            {
+                const uint8_t voice = voice_for_channel(event->channel);
+                state->pitch_bend[voice] = event->pitch_bend;
+                apply_voice(state, output, voice);
+            }
             break;
 
         default:
@@ -113,7 +97,7 @@ static void tick_1ms(void* mode_state, OutputState* output) {
 
 Mode mode_dual_mono_create(ModeDualMonoState* state) {
     Mode mode = {
-        .name = "dual_mono",
+        .name = "midi2",
         .state = state,
         .implemented = true,
         .reset = reset,

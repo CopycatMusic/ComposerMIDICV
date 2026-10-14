@@ -2,17 +2,19 @@
 
 bool midi_parser_parse_usb_packet(const uint8_t packet[4], MidiEvent* event) {
     event->type = MIDI_EVENT_NONE;
+    event->source = MIDI_SOURCE_UNKNOWN;
     event->channel = 0xff;
     event->data1 = 0;
     event->data2 = 0;
     event->pitch_bend = 0;
     event->realtime_byte = 0;
+    event->usb_connected = false;
 
     const uint8_t cin = packet[0] & 0x0fu;
     const uint8_t status = packet[1];
     const uint8_t status_type = status & 0xf0u;
 
-    if (cin == 0x0fu) {
+    if (status >= 0xf8u) {
         event->type = MIDI_EVENT_REALTIME;
         event->realtime_byte = status;
         return true;

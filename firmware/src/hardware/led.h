@@ -5,6 +5,7 @@
 #include <stdint.h>
 
 void led_init(void);
+void led_compensate_rgb(uint8_t* r, uint8_t* g, uint8_t* b);
 void led_set_rgb(bool r, bool g, bool b);
 void led_set_rgb_u8(uint8_t r, uint8_t g, uint8_t b);
 void led_off(void);

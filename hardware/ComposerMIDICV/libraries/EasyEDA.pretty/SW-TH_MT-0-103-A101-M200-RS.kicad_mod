@@ -1,0 +1,245 @@
+(footprint "SW-TH_MT-0-103-A101-M200-RS"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(locked yes)
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "1e50f5be-3860-4c38-8ca1-797707dac7f6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW-TH_MT-0-103-A101-M200-RS"
+		(at -31.1625 56.345 180)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "1e375cd7-ff76-4d46-99bb-71ab172be4c6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/C1788492.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ddabf1a5-3697-410f-9095-d652021bff1c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8e18fb6d-ec11-49c7-90ae-3569e13add42")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C1788492"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3f43e941-961d-475c-bb91-ac3e550187ce")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "YUEN FUNG(源丰)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3dbe6064-95b8-4477-9522-261403797005")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "MT-0-102-A101-M200-RS"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f73f108b-69a4-47ee-91f7-461805f7350c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "ComposerMIDICV.kicad_sch")
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -6.48 4)
+		(end -6.48 -4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bc87ac55-b051-4a5e-9102-7114db0052c6")
+	)
+	(fp_line
+		(start 6.5 -4)
+		(end -6.48 -4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "955b0de9-4ca3-45ae-9430-230d4995127b")
+	)
+	(fp_line
+		(start 6.5 -4)
+		(end 6.5 4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ef564f49-74ee-4079-bd79-2652a2ac9ede")
+	)
+	(fp_line
+		(start 6.5 4)
+		(end -6.48 4)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fc092c9c-626a-4c37-9fc5-7c512e337a2a")
+	)
+	(fp_circle
+		(center -6.5 4)
+		(end -6.47 4)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "63afdb9b-04c0-4559-8cd4-e9444b4aa637")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.43 0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "175e8766-4513-4a6c-ab4c-bb17d7224a9e")
+	)
+	(fp_line
+		(start -6.5 -4)
+		(end 6.5 -4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e9517723-3a7b-4655-b450-a8b9d88dc008")
+	)
+	(fp_line
+		(start -6.5 4)
+		(end -6.5 -4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b20234f1-595a-4f2a-9c28-0ce6fd0ef77f")
+	)
+	(fp_line
+		(start 6.5 -4)
+		(end 6.5 4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "62c35d56-f5ae-4fac-b29b-d42ca4ee5b56")
+	)
+	(fp_line
+		(start 6.5 4)
+		(end -6.5 4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c3ff85be-bb78-46bc-a8ea-0a950e7fae4c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "6f5677df-c76a-4ed0-884a-8fda78014d1c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -4.7 0)
+		(size 1.8 3)
+		(drill oval 1.199998 2.499995)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ed943eb5-0483-4a43-ae99-05fd4688dde0")
+	)
+	(pad "2" thru_hole oval
+		(at 0 0)
+		(size 1.8 3)
+		(drill oval 1.199998 2.499995)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f7d460da-c123-4e58-a64b-4957a356d7bc")
+	)
+	(pad "3" thru_hole oval
+		(at 4.7 0)
+		(size 1.8 3)
+		(drill oval 1.199998 2.499995)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c1684826-65fd-40be-8fda-caf66f1a192a")
+	)
+	(embedded_fonts no)
+	(model "${KICAD_3RD_PARTY}/EasyEDA.3dshapes/SW-TH_MT-0-103-A101-M200-RS.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

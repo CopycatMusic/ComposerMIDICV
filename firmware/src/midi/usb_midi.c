@@ -13,5 +13,11 @@ bool usb_midi_read_event(MidiEvent* event) {
         return false;
     }
 
-    return midi_parser_parse_usb_packet(packet, event);
+    if (!midi_parser_parse_usb_packet(packet, event)) {
+        return false;
+    }
+
+    event->source = MIDI_SOURCE_USB;
+    event->usb_connected = tud_mounted();
+    return true;
 }

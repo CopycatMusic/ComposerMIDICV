@@ -12,6 +12,12 @@ static uint16_t clamp_cv_mv_i32(int32_t value) {
     return (uint16_t)value;
 }
 
+bool pitch_cv_note_is_in_output_range(uint8_t midi_note) {
+    const int32_t semitones_from_base = (int32_t)midi_note - 36;
+    const int32_t mv = (semitones_from_base * 1000 + 6) / 12;
+    return mv >= 0 && mv <= (int32_t)COMPOSER_MIDICV_CV_MAX_MV;
+}
+
 uint16_t pitch_cv_note_to_mv(uint8_t midi_note) {
     const int32_t semitones_from_base = (int32_t)midi_note - 36;
     const int32_t mv = (semitones_from_base * 1000 + 6) / 12;

@@ -1,5 +1,49 @@
-ref/
-devlog/
-third_party/toolchains/
-**/build-arm/
+# Local reference material and development records
+/ref/
+/devlog/
+/devdocs/
+/.git-rewrite/
+/_local_archive/
+.agent/
+.agents/
+.codex/
+
+# Local toolchains, SDK outputs and binaries
+/third_party/toolchains/
+/third_party/AudioJacks/
+**/build*/
+**/dist/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.o
+*.a
+*.elf
+*.elf.map
+*.bin
+*.hex
+*.uf2
+*.dis
+.ninja_*
+
+# Editor, OS and KiCad local state
+.vscode/
+.idea/
 .DS_Store
+._*
+**/.history/
+*-backups/
+*.kicad_prl
+*.lck
+*.bak
+*.tmp
+/hardware/ComposerMIDICV/.step
+/hardware/ComposerPanel/BGCU/
+
+# Local credentials and signing material
+.env
+.env.*
+*.key
+*.p12
+*.pfx

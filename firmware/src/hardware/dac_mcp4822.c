@@ -43,18 +43,18 @@ static void write_frame(uint cs_pin, bool channel_b, uint16_t code) {
 void dac_mcp4822_init(void) {
     gpio_init(PIN_DAC_SCK);
     gpio_init(PIN_DAC_MOSI);
-    gpio_init(PIN_DAC_CS_U5);
-    gpio_init(PIN_DAC_CS_U6);
+    gpio_init(PIN_DAC_CS_U8);
+    gpio_init(PIN_DAC_CS_U9);
 
     gpio_set_dir(PIN_DAC_SCK, GPIO_OUT);
     gpio_set_dir(PIN_DAC_MOSI, GPIO_OUT);
-    gpio_set_dir(PIN_DAC_CS_U5, GPIO_OUT);
-    gpio_set_dir(PIN_DAC_CS_U6, GPIO_OUT);
+    gpio_set_dir(PIN_DAC_CS_U8, GPIO_OUT);
+    gpio_set_dir(PIN_DAC_CS_U9, GPIO_OUT);
 
     gpio_put(PIN_DAC_SCK, false);
     gpio_put(PIN_DAC_MOSI, false);
-    gpio_put(PIN_DAC_CS_U5, true);
-    gpio_put(PIN_DAC_CS_U6, true);
+    gpio_put(PIN_DAC_CS_U8, true);
+    gpio_put(PIN_DAC_CS_U9, true);
 
     dac_mcp4822_all_zero();
 }
@@ -62,16 +62,16 @@ void dac_mcp4822_init(void) {
 void dac_mcp4822_write_channel(uint8_t channel, uint16_t code) {
     switch (channel) {
         case 0:
-            write_frame(PIN_DAC_CS_U5, false, code);
+            write_frame(PIN_DAC_CS_U8, false, code);
             break;
         case 1:
-            write_frame(PIN_DAC_CS_U5, true, code);
+            write_frame(PIN_DAC_CS_U8, true, code);
             break;
         case 2:
-            write_frame(PIN_DAC_CS_U6, false, code);
+            write_frame(PIN_DAC_CS_U9, false, code);
             break;
         case 3:
-            write_frame(PIN_DAC_CS_U6, true, code);
+            write_frame(PIN_DAC_CS_U9, true, code);
             break;
         default:
             break;

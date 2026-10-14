@@ -1,0 +1,340 @@
+(footprint "OPTO-SMD-5_L3.7-W4.6-P1.27-LS7.0-BR"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -5.27 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "175e5baa-15b7-422c-99e1-dcf1dd971e0b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "OPTO-SMD-5_L3.7-W4.6-P1.27-LS7.0-BR"
+		(at 0 5.27 180)
+		(layer "F.Fab")
+		(uuid "3a56e2c3-abe5-4077-b9b7-859db0da149e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://lcsc.com/product-detail/SMD-Optocouplers_TOSHIBA_TLP2361-TPL-E_TLP2361-TPL-E_C107626.html"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2d807b9-7e72-414a-8c1a-dbd4ba11f46b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "82328e6e-5e31-4113-8dc8-d7162aca06d7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C107626"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f028d14-a5df-46f6-bf16-96e7a0e27de5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "TOSHIBA(东芝)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c91bebf-2e20-4d6c-8a6c-dd52e985fe1f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "TLP2361(TPL,E"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1de011f2-ba52-4a2a-91aa-dc4a9936d1ed")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "ComposerMIDICV.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.3 -1.9)
+		(end 2.3 -1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "420ed348-5880-49a6-8008-1928d762e02a")
+	)
+	(fp_line
+		(start -2.3 -1.8)
+		(end -2.3 -1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "237d5d69-0c1f-495d-9dfa-e49d7703c1d5")
+	)
+	(fp_line
+		(start -2.3 -0.74)
+		(end -2.3 -0.52)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "21546797-2530-4a8f-8c07-decc185eac7f")
+	)
+	(fp_line
+		(start -2.3 0.52)
+		(end -2.3 0.74)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "191ac200-e9a9-4eaa-9237-45c796c9fd3d")
+	)
+	(fp_line
+		(start -2.3 1.8)
+		(end -2.3 1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b99e5965-51d5-4455-b7fe-9c94830ee164")
+	)
+	(fp_line
+		(start -2.3 1.9)
+		(end -2.3 1.8)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9de80ccf-8d08-423f-b674-6558d9545f8b")
+	)
+	(fp_line
+		(start -2.3 1.9)
+		(end -0.51 1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3b93cf53-b1e3-41a8-8f7d-72d7c89ada57")
+	)
+	(fp_line
+		(start 2.3 -1.8)
+		(end 2.3 -1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2b9eac6f-17fa-44a8-8d8f-3c5bbc0d251e")
+	)
+	(fp_line
+		(start 2.3 0.74)
+		(end 2.3 -0.74)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f147bbca-2819-4622-9476-e7ba897f7e64")
+	)
+	(fp_line
+		(start 2.3 1.9)
+		(end 0.51 1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6f234380-3da3-4e12-b422-e484afe18cdc")
+	)
+	(fp_line
+		(start 2.3 1.9)
+		(end 2.3 1.8)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9ae7fb93-d5e3-4c7f-a3d0-a49af639e7c4")
+	)
+	(fp_arc
+		(start -0.51 1.9)
+		(mid 0 1.39)
+		(end 0.51 1.9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b971a90a-4be8-44e7-b2a7-2ffe9fc98a91")
+	)
+	(fp_arc
+		(start 3.05 2.29)
+		(mid 3.04873 1.990005)
+		(end 3.052539 2.289979)
+		(stroke
+			(width 0.4)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ac3da1b-5cfe-425f-9096-9a43f2a27142")
+	)
+	(fp_circle
+		(center 3.56 1.91)
+		(end 3.59 1.91)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "bf0aa5bd-c520-474d-853f-9c5ecadfdc5b")
+	)
+	(fp_circle
+		(center 3.94 1.27)
+		(end 4.06 1.27)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "0a8dc7ae-0617-4323-bc99-ea513663cf8b")
+	)
+	(fp_line
+		(start -2.3 -1.9)
+		(end 2.3 -1.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6e8325c1-f71e-4ec0-ba81-79d4e778debb")
+	)
+	(fp_line
+		(start -2.3 1.8)
+		(end -2.3 -1.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f2d39726-3f89-4a8e-86b4-ee0a19158f0d")
+	)
+	(fp_line
+		(start 2.3 -1.9)
+		(end 2.3 1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9f97e5f7-fc33-4dae-a05e-e5c8a3f1fdb2")
+	)
+	(fp_line
+		(start 2.3 1.8)
+		(end -2.3 1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "efab181a-3e6f-47af-90a3-bf2c6747b079")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.25 3.5 180)
+		(layer "F.Fab")
+		(uuid "ebff7d8a-674a-4bf7-8d01-5e9b7039eb1b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd oval
+		(at 3.15 1.27 270)
+		(size 0.65 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "542dac28-ca12-4cd2-af18-f2f575a06603")
+	)
+	(pad "3" smd oval
+		(at 3.17 -1.27 270)
+		(size 0.65 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b399ff20-cfdd-4707-aa05-445477b91cee")
+	)
+	(pad "4" smd oval
+		(at -3.15 -1.27 270)
+		(size 0.65 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "35195523-31fe-4cf2-acf2-b097b265f6d1")
+	)
+	(pad "5" smd oval
+		(at -3.18 0 270)
+		(size 0.65 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c1e14fde-8de0-4f29-b988-b61ca9ae55fc")
+	)
+	(pad "6" smd oval
+		(at -3.15 1.27 270)
+		(size 0.65 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3cb18df2-9a38-4040-8335-e91444b467fe")
+	)
+	(embedded_fonts no)
+	(model "${KICAD_3RD_PARTY}/EasyEDA.3dshapes/OPTO-SMD-5_L3.7-W4.6-P1.27-LS7.0-BR.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

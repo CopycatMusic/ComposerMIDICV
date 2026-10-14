@@ -11,7 +11,7 @@
 #endif
 
 #define CALIBRATION_MAGIC 0x434d4341u  // "CMCA"
-#define CALIBRATION_VERSION 1u
+#define CALIBRATION_VERSION 2u
 
 typedef struct {
     uint32_t magic;
@@ -29,6 +29,12 @@ static uint16_t clamp_mv_u32(uint32_t value) {
         return COMPOSER_MIDICV_CV_MAX_MV;
     }
     return (uint16_t)value;
+}
+
+static uint16_t mv_to_dac_code(uint16_t mv) {
+    return (uint16_t)(((uint32_t)mv * COMPOSER_MIDICV_DAC_MAX_CODE +
+                       COMPOSER_MIDICV_ANALOG_FULL_SCALE_MV / 2u) /
+                      COMPOSER_MIDICV_ANALOG_FULL_SCALE_MV);
 }
 
 static uint32_t crc32_update(uint32_t crc, uint8_t byte) {
@@ -97,7 +103,7 @@ uint16_t calibration_apply_mv(const CalibrationState* state,
     const int32_t target_delta = (int32_t)p1.target_mv - p0.target_mv;
 
     if (measured_delta == 0 || target_delta == 0) {
-        return clamp_mv_u32(target_mv);
+        return mv_to_dac_code(clamp_mv_u32(target_mv));
     }
 
     // Invert the measured response line so the requested voltage is corrected
@@ -110,7 +116,7 @@ uint16_t calibration_apply_mv(const CalibrationState* state,
     if (corrected < 0) {
         corrected = 0;
     }
-    return clamp_mv_u32((uint32_t)corrected);
+    return mv_to_dac_code(clamp_mv_u32((uint32_t)corrected));
 }
 
 bool calibration_set_measurement(CalibrationState* state,
