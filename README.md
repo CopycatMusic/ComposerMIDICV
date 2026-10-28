@@ -4,7 +4,9 @@
 
 Composer connects a DAW or MIDI instrument to analog synthesizers through USB MIDI or a 3.5 mm TRS MIDI input. Four CV outputs and four Gate outputs provide pitch, velocity, modulation, random voltages and clock signals across six hardware-selected modes.
 
-[USER_MANUAL](docs/USER_MANUAL.md) · [Firmware guide](firmware/README.md)  [ManufacturingGuide](docs/ManufacturingGuide.md)
+![Prototype](docs/pictures/Prototype.png)
+
+[USER_MANUAL](docs/USER_MANUAL.md) · [Firmware guide](firmware/README.md) · [ManufacturingGuide](docs/ManufacturingGuide.md)
 
 ## Features
 
